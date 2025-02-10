@@ -2,15 +2,30 @@
 
 #include <stdio.h>
 
-int fibo(void)
+int fib(int n)
 {
-    
-    return 0;
+    if(n==0)
+    {
+        return 0;
+    }
+    if(n==1)
+    {
+        return 1;
+    }
+    int c=fib(n-1)+fib(n-2);
+    return c;
 }
 
 int main ()
 {
-    printf ("Hello World");
+    int n;
+    printf("enter n:");
+    scanf("%d",&n);
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+        printf("%d,",fib(i));
+    }
 
     return 0;
 }
